@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    gap: 1rem;
+}
+
+.cart{
+    display: flex;
+    gap: 1rem;
+}
+
+.cart img{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.carousel-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-section{
+    display: flex;
+}
+
+.img-section img{
+    width: 100%;
+}
+
+.move-btns{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    bottom: 14rem;
+    width: 95%;
+}
+
+.move-btns img{
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 100px;
+    padding: 0.8rem;
+}
+
+.text-section{
+    padding: 0rem 1.5rem;
+    margin-top: -1rem;
+}
+
+.text-section h4{
+    margin-top: 0;
+    color: hsl(26, 100%, 55%);
+}
+
+.text-section p{
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.price-section{
+    display: flex;
+    padding: 0rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price h4{
+    padding: 0.2rem 0.6rem;
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 5px;
+    color: hsl(26, 100%, 55%);
+}
+
+.mrp h4{
+    color: hsl(220, 14%, 75%);
+    text-decoration: line-through;
+}
+
+.utility-row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    border-radius: 10px;
+    background-color: hsl(223, 64%, 98%);
+    padding: 0rem 1rem;
+}
+
+.row img{
+    width: 1rem;
+    height: 1rem;
+}
+
+#minus {
+    height: 0.4rem;
+}
+
+.utility-row button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    border-radius: 10px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    outline: none;
+    color: white;
+    gap: 1rem;
+    margin-top: 2rem;
+}
