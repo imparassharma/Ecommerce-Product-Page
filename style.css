@@ -10,6 +10,13 @@ header{
     justify-content: space-between;
 }
 
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo{
     display: flex;
     gap: 1rem;
@@ -124,7 +131,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 85%;
     border-radius: 10px;
     background-color: hsl(26, 100%, 55%);
     border: none;
@@ -132,4 +138,39 @@ header{
     color: white;
     gap: 1rem;
     margin-top: 2rem;
+}
+
+.basket{
+    display: none;
+    flex-direction: column;
+    width: 95%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.308);
+    position: absolute;
+    background-color: white;
+    top: 5rem;
+    z-index: 1;
+}
+
+.basket h4{
+    padding: 0rem 1.5rem;
+}
+
+.basket hr{
+    width: 100%;
+    padding: 0;
+}
+
+.empty{
+    display: none;
+    padding: 4rem 3.5rem 5rem 3.5rem;
+    text-align: center;
+}
+
+.empty h4{
+    color: hsl(219, 9%, 45%);
+}
+
+.show{
+    display: flex;
 }
