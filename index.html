@@ -13,17 +13,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="logo">
-            <img src="images/icon-menu.svg" alt="">
+            <img src="images/icon-menu.svg" alt="" id="menu-open">
             <img src="images/logo.svg" alt="" id="logo">
         </div>
         <div class="cart">
-            <img src="images/icon-cart.svg" alt="">
+            <img src="images/icon-cart.svg" alt="" id="cart">
             <img src="images/image-avatar.png" alt="" id="avatar">
         </div>
     </header>
+    <div class="mobile-menu">
+        <div class="close" id="menu-close">
+            <img src="images/icon-close.svg" alt="">
+        </div>
+        <div class="links">
+            <a href="">Collectibles</a>
+            <a href="">Men</a>
+            <a href="">Women</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
     <div class="main">
         <div class="basket">
             <h4>Cart</h4>
@@ -32,7 +43,19 @@
                 <h4>Your cart is empty.</h4>
             </div>
             <div class="filled">
-
+                <div class="cart-detail">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="">
+                    <div class="detail">
+                        <p>Autumn Limited Edititon...</p>
+                        <p id="amount">$125.00 x 1 <span id="final-amount">$125.00</span></p>
+                    </div>
+                    <div class="delete-icon">
+                        <img src="images/icon-delete.svg" alt="" id="delete">
+                    </div>
+                </div>
+                <div class="checkout">
+                    <button>Checkout</button>
+                </div>
             </div>
         </div>
         <div class="carousel-section">
@@ -65,13 +88,13 @@
         <div class="utility-row">
             <div class="row">
                 <img src="images/icon-minus.svg" alt="" id="minus">
-                <h2>0</h2>
+                <h3 id="counter">0</h3>
                 <img src="images/icon-plus.svg" alt="" id="plus">
             </div>
         
             <button>
                 <img src="images/icon-cart-white.svg" alt="">
-                <h3>Add to cart</h3>
+                <h3 id="add-to-cart">Add to cart</h3>
             </button>
         </div>
     </div>
