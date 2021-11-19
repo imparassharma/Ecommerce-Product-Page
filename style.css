@@ -39,8 +39,6 @@ header{
 .main{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .logo{
@@ -56,12 +54,17 @@ header{
 .cart img{
     width: 1.7rem;
     height: 1.7rem;
+    cursor: pointer;
 }
 
-.carousel-section{
-    display: flex;
+.carousel-section--mobile{
+    display: none;
     flex-direction: column;
     align-items: center;
+}
+
+.active{
+    display: flex;
 }
 
 .img-section{
@@ -86,6 +89,7 @@ header{
     background-color: white;
     border-radius: 100px;
     padding: 0.8rem;
+    cursor: pointer;
 }
 
 .text-section{
@@ -109,6 +113,7 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 88%;
+    padding: 0rem 1.4rem;
 }
 
 .price{
@@ -153,6 +158,11 @@ header{
 
 #minus {
     height: 0.4rem;
+    cursor: pointer;
+}
+
+#plus{
+    cursor: pointer;
 }
 
 .utility-row button{
@@ -169,6 +179,10 @@ header{
     margin-top: 2rem;
     width: 90%;
     box-shadow: 2px 4px 15px hsla(26, 100%, 55%, 0.486);
+}
+
+.utility-row button:hover{
+    opacity: 0.7;
 }
 
 .basket{
@@ -190,6 +204,7 @@ header{
 .basket hr{
     width: 100%;
     padding: 0;
+    display: block;
 }
 
 .empty{
@@ -244,6 +259,7 @@ header{
 .delete-icon img{
     width: 1rem;
     height: 1.2rem;
+    cursor: pointer;
 }
 
 .checkout button{
@@ -257,4 +273,182 @@ header{
     font-weight: 500;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+
+.item-number{
+    display: none;
+    justify-content: center;
+    height: 0.8rem;
+    width: 1.2rem;
+    border-radius: 25px;
+    background-color: hsl(26, 100%, 55%);
+    color: white;
+    font-weight: 700;
+    position: absolute;
+    top: 1.4rem;
+    right: 4rem;
+    font-size: 8px;
+}
+
+.desktop-nav,hr,.carousel-section--desktop{
+    display: none;
+}
+
+.carousel-section--mobile{
+    display: flex;
+}
+
+@media screen and (min-width:1440px) {
+    body{
+        padding: 0rem 8rem;
+    }
+
+    header{
+        padding: 2rem 1.5rem;
+    }
+
+    .cart{
+        align-items: center;
+    }
+    #avatar{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .desktop--main{
+        display: flex;
+        padding: 3rem;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .left--section{
+        width: 45%;
+    }
+
+    .right--section{
+        width: 45%;
+    }
+
+    .carousel-section--desktop{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .carousel-section--desktop .img-section img{
+        width: 85%;
+        border-radius: 15px;
+    }
+    
+    #menu-open{
+        display: none;
+    }
+
+    .nav-links{
+        list-style-type: none;
+    }
+
+    .desktop-nav{
+        display: flex;
+        margin-left: -25rem;
+    }
+
+    .desktop-nav li{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav-links a{
+        text-decoration: none;
+        color: hsl(219, 9%, 45%);
+    }
+
+    .nav-links a:hover{
+        text-decoration: underline 3px hsl(26, 100%, 55%);
+        text-underline-offset: 3rem;
+    }
+
+    #line{
+        display: block;
+        color: rgba(29, 27, 27, 0.377);
+        width: 98%;
+        margin-bottom: 3rem;
+        margin-top: 0rem;
+    }
+
+    .img-row{
+        display: flex;
+        gap: 1.3rem;
+        
+    }
+
+    .img-row img{
+        width: 5.5rem;
+        height: 5.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .img-row img:hover{
+        opacity: 0.7;
+        border: solid 2px hsl(26, 100%, 55%);
+    }
+
+    .text-section h4{
+        font-size: 16px;
+    }
+
+    .text-section h1{
+        font-size: 42px;
+        margin-top: 0.8rem;
+    }
+
+    .price-section{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mrp{
+        margin-top: -2rem;
+    }
+
+    .utility-row{
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .row{
+        width: 50%;
+    }
+
+    .utility-row button{
+        margin-top: 0;
+        cursor: pointer;
+    }
+
+    .basket{
+        width: 25%;
+        right: 7rem;
+    }
+
+    .empty{
+        padding: 2rem 0rem 5rem 0rem;
+    }
+
+    .filled{
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .item-number{
+        position: absolute;
+        top: 2.6rem;
+        right: 12.5rem;
+        font-size: 10px;
+    }
+
+    .carousel-section--mobile{
+        display: none;
+    }
 }
