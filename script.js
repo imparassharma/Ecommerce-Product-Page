@@ -12,7 +12,17 @@ const amount = document.getElementById("amount");
 const final_amount = document.getElementById("final-amount");
 const clear = document.getElementById("delete");
 const add_to_cart = document.getElementById("add-to-cart");
+const item_no = document.querySelector(".item-number");
+const img_row = document.querySelector(".img-row");
+const main_img = document.getElementById("main-img");
+const images = Array.from(img_row.children);
 
+
+images.forEach((image,index)=>{
+    image.addEventListener("click",function(){
+        main_img.innerHTML = "<img src=\"images/image-product-"+(index+1)+".jpg\" alt=\"\"></img>"
+    })
+})
 
 menu_open.addEventListener("click",function(){
     menu.classList.add("show");
@@ -32,6 +42,8 @@ let count = 0;
 add.addEventListener("click",function(){
     count++;
     counter.innerHTML = count;
+    item_no.classList.add("show");
+    item_no.innerHTML = count;
 })
 
 add_to_cart.addEventListener("click",function(){
@@ -39,6 +51,10 @@ add_to_cart.addEventListener("click",function(){
     filled.classList.add("show");
     const final = 125 * count;
     amount.innerHTML = "$125 x" + count + "<span id=\"final-amount\">$"+final+"</span>";
+    if(count==0){
+        empty.classList.add("show");
+        filled.classList.remove("show");
+    }
 })
 
 remove.addEventListener("click",function(){
@@ -50,13 +66,16 @@ remove.addEventListener("click",function(){
     }
     const final = 125 * count;
     amount.innerHTML = "$125 x" + count + "<span id=\"final-amount\">$"+final+"</span>";
+    item_no.innerHTML = count;
     if(count==0){
         empty.classList.add("show");
         filled.classList.remove("show");
+        item_no.classList.remove("show");
     }
 })
 
 clear.addEventListener("click",function(){
     empty.classList.add("show");
     filled.classList.remove("show");
+    item_no.classList.remove("show");
 })
