@@ -90,7 +90,7 @@ clear.addEventListener("click",function(){
 
 
 /*******************************************SLIDER*************************************************/
-changes
+
 const img_section = document.getElementById("mobile-carousel");
 const imgs = Array.from(img_section.children);
 const next = document.getElementById("next");
