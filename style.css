@@ -1,7 +1,7 @@
 body{
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
-    overflow-y: none;
+    padding-bottom: 5rem;
 }
 
 header{
@@ -39,6 +39,7 @@ header{
 .main{
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .logo{
